@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://zonafotografia.com/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zonafotografia.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zonafotografia.com/"/>
+  </url>
+
+  <url>
+    <loc>https://zonafotografia.com/fotos-carnet.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zonafotografia.com/fotos-carnet.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zonafotografia.com/fotos-carnet.html"/>
+  </url>
+
+  <url>
+    <loc>https://zonafotografia.com/imprimir-fotos.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zonafotografia.com/imprimir-fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zonafotografia.com/imprimir-fotos.html"/>
+  </url>
+
+  <url>
+    <loc>https://zonafotografia.com/restauracion-fotos.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zonafotografia.com/restauracion-fotos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zonafotografia.com/restauracion-fotos.html"/>
+  </url>
+
+  <url>
+    <loc>https://zonafotografia.com/atelier.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zonafotografia.com/atelier.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zonafotografia.com/atelier.html"/>
+  </url>
+
+  <url>
+    <loc>https://zonafotografia.com/estudio.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zonafotografia.com/estudio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zonafotografia.com/estudio.html"/>
+  </url>
+
+  <url>
+    <loc>https://zonafotografia.com/nosotros.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zonafotografia.com/nosotros.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zonafotografia.com/nosotros.html"/>
+  </url>
+
+  <url>
+    <loc>https://zonafotografia.com/contacto.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zonafotografia.com/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zonafotografia.com/contacto.html"/>
+  </url>
+
+  <url>
+    <loc>https://zonafotografia.com/privacidad.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zonafotografia.com/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zonafotografia.com/privacidad.html"/>
+  </url>
+
+</urlset>

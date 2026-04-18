@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier ZONA Fotografía | Lienzos, paneles y fotopinturas artesanales en Alhama de Murcia</title>
+  <meta name="description" content="Lienzos fotográficos, paneles espumados, fotopinturas artesanales, revelado en B&N y álbumes de cuero. Todo fabricado aquí. ZONA Fotografía, Alhama de Murcia.">
+  <link rel="canonical" href="https://zonafotografia.com/atelier.html">
+
+  <meta property="og:title" content="Atelier ZONA Fotografía | Lienzos, paneles y fotopinturas artesanales">
+  <meta property="og:description" content="Lienzos fotográficos, paneles espumados, fotopinturas artesanales, revelado en B&N y álbumes de cuero. Todo fabricado en ZONA Fotografía, Alhama de Murcia.">
+  <meta property="og:url" content="https://zonafotografia.com/atelier.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://zonafotografia.com/img/lienzo-1.jpg">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="fonts.css">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --negro:      #111111;
+      --texto:      #1C1C1C;
+      --gris-fondo: #F4F2EF;
+      --gris-medio: #888888;
+      --acento:     #8B6914;
+      --acento-cl:  #F0E8D0;
+      --blanco:     #FFFFFF;
+      --max-w:      1200px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Source Sans 3', system-ui, sans-serif; font-weight: 400; color: var(--texto); background: var(--blanco); line-height: 1.65; }
+    img { display: block; max-width: 100%; height: auto; }
+    a   { color: inherit; text-decoration: none; }
+
+    /* CABECERA */
+    header { background: var(--negro); position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--acento); }
+    .header-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 1rem; }
+    .logo { font-family: 'Playfair Display', Georgia, serif; font-size: 1.45rem; font-weight: 600; color: var(--blanco); letter-spacing: 0.04em; white-space: nowrap; flex-shrink: 0; }
+    .logo span { color: var(--acento); }
+    .header-right { display: flex; align-items: center; gap: 1rem; }
+    .lang-toggle { display: flex; border: 1px solid #333; border-radius: 3px; overflow: hidden; flex-shrink: 0; }
+    .lang-btn { background: transparent; border: none; color: #777; font-family: 'Source Sans 3', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; padding: 0.3rem 0.6rem; cursor: pointer; transition: all 0.2s; }
+    .lang-btn.active { background: var(--acento); color: #fff; }
+    .lang-btn:hover:not(.active) { background: rgba(255,255,255,0.08); color: #ccc; }
+    nav { display: flex; gap: 0.15rem; flex-wrap: wrap; }
+    nav a { color: #bbbbbb; font-size: 0.80rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.4rem 0.65rem; border-radius: 3px; transition: color 0.2s, background 0.2s; }
+    nav a:hover { color: var(--blanco); background: rgba(255,255,255,0.09); }
+    nav a[aria-current="page"] { color: var(--acento); }
+
+    /* CABECERA DE PÁGINA */
+    .page-header { background: var(--negro); border-bottom: 1px solid #222; padding: 2.5rem 1.5rem 2rem; }
+    .page-header-inner { max-width: var(--max-w); margin: 0 auto; }
+    .breadcrumb { font-size: 0.78rem; color: #666; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
+    .breadcrumb a { color: #666; transition: color 0.2s; }
+    .breadcrumb a:hover { color: #999; }
+    .breadcrumb span { color: var(--acento); }
+    .page-header h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; color: var(--blanco); line-height: 1.2; max-width: 800px; }
+    .page-header .page-geo { margin-top: 0.5rem; font-family: 'Source Sans 3', system-ui, sans-serif; font-size: 0.83rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; color: var(--acento); }
+    .page-header .subtitulo { margin-top: 0.75rem; color: #999; font-size: 1rem; max-width: 640px; }
+
+    /* FILOSOFÍA */
+    .filosofia {
+      background: #1a1510;
+      border-bottom: 1px solid #2a2015;
+      padding: 2.75rem 1.5rem;
+      text-align: center;
+    }
+    .filosofia-inner { max-width: 760px; margin: 0 auto; }
+    .filosofia p {
+      font-size: 0.80rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--acento);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    .filosofia blockquote {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      color: #ddd;
+      line-height: 1.65;
+    }
+    .filosofia blockquote strong { color: var(--acento-cl); font-style: normal; }
+
+    /* PRODUCTOS — alternating sections */
+    .producto-seccion {
+      padding: 3.5rem 1.5rem;
+    }
+    .producto-seccion:nth-child(odd)  { background: var(--blanco); }
+    .producto-seccion:nth-child(even) { background: var(--gris-fondo); }
+
+    .producto-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .producto-inner.invertido .producto-imagenes { order: 2; }
+    .producto-inner.invertido .producto-texto    { order: 1; }
+
+    /* Imágenes */
+    .imagenes-doble {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .imagenes-doble img,
+    .imagen-simple img,
+    .imagen-cartel img {
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      object-fit: cover;
+    }
+
+    .imagenes-doble img { aspect-ratio: 3/2; }
+    .imagen-simple img  { aspect-ratio: 3/2; }
+
+    .imagen-cartel {
+      display: flex;
+      justify-content: center;
+    }
+    .imagen-cartel img {
+      max-width: 300px;
+      width: 100%;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    }
+
+    /* Texto de producto */
+    .producto-texto h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.65rem;
+      font-weight: 400;
+      margin-bottom: 0.4rem;
+      color: var(--texto);
+    }
+
+    .producto-etiqueta {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--acento);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .separador { width: 40px; height: 2px; background: var(--acento); margin: 1rem 0 1.25rem; }
+
+    .producto-texto p {
+      font-size: 0.97rem;
+      line-height: 1.78;
+      color: #3a3a3a;
+      margin-bottom: 1rem;
+    }
+
+    /* Tamaños */
+    .tamanios-label {
+      font-size: 0.73rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gris-medio);
+      font-weight: 600;
+      margin-top: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .tamanios {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tam {
+      background: var(--negro);
+      color: #ccc;
+      border-radius: 3px;
+      padding: 0.3rem 0.65rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    /* Opciones (revelado BN) */
+    .opciones {
+      margin-top: 1rem;
+      border-top: 1px solid #e8e4de;
+      padding-top: 1rem;
+    }
+
+    .opcion {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #f0ede8;
+      font-size: 0.92rem;
+      color: #3a3a3a;
+    }
+
+    .opcion:last-child { border-bottom: none; }
+
+    .opcion::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      min-width: 6px;
+      background: var(--acento);
+      border-radius: 50%;
+      margin-top: 0.3rem;
+    }
+
+    /* Nota histórica */
+    .nota-historica {
+      font-size: 0.84rem;
+      color: #888;
+      font-style: italic;
+      border-left: 2px solid #d4c4a0;
+      padding-left: 0.75rem;
+      margin-top: 1rem;
+      line-height: 1.6;
+    }
+
+    /* CTA WhatsApp */
+    .btn-wa { display: inline-flex; align-items: center; gap: 0.5rem; background: #25D366; color: #fff; padding: 0.75rem 1.5rem; border-radius: 4px; font-weight: 600; font-size: 0.93rem; margin-top: 1.25rem; transition: background 0.2s, transform 0.15s; box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+    .btn-wa:hover { background: #1ebe5b; transform: translateY(-2px); }
+
+    /* BARRA DE DATOS */
+    .barra-datos { background: var(--negro); color: #bbbbbb; padding: 2.75rem 1.5rem; }
+    .barra-datos-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 2rem; text-align: center; }
+    .dato h4 { font-size: 0.70rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--acento); margin-bottom: 0.6rem; font-weight: 600; }
+    .dato p  { font-size: 0.90rem; line-height: 1.65; }
+    .dato a  { color: #bbbbbb; transition: color 0.2s; }
+    .dato a:hover { color: var(--blanco); }
+    .badge-accesible { display: inline-block; margin-top: 0.5rem; font-size: 0.75rem; color: #666; }
+
+    /* FOOTER */
+    footer { background: #0a0a0a; border-top: 1px solid #222; text-align: center; padding: 1.5rem; font-size: 0.80rem; color: #555; }
+    footer span { color: var(--acento); }
+
+    /* RESPONSIVE */
+    @media (max-width: 820px) {
+      .header-inner { height: auto; flex-direction: column; padding: 0.9rem 1.5rem; gap: 0.6rem; }
+      .header-right { flex-wrap: wrap; justify-content: center; }
+      nav { justify-content: center; }
+      .producto-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .producto-inner.invertido .producto-imagenes { order: 0; }
+      .producto-inner.invertido .producto-texto    { order: 0; }
+      .imagen-cartel img { max-width: 260px; }
+    }
+
+    @media (max-width: 480px) {
+      .imagenes-doble { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PhotographyBusiness",
+    "name": "ZONA Fotografía",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C/ Virgen del Rosario, 5, Bajos 1 y 2",
+      "addressLocality": "Alhama de Murcia",
+      "addressRegion": "Murcia",
+      "postalCode": "30840",
+      "addressCountry": "ES"
+    },
+    "telephone": "+34608397283",
+    "url": "https://zonafotografia.com/atelier.html",
+    "openingHours": ["Mo-Th 10:00-13:30,17:30-20:00", "Fr 10:00-13:30"]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- CABECERA -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="ZONA Fotografía — Inicio">ZONA <span>Fotografía</span></a>
+      <div class="header-right">
+        <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+          <button class="lang-btn active" id="btn-es" onclick="setLang('es')" aria-pressed="true">ES</button>
+          <button class="lang-btn"        id="btn-en" onclick="setLang('en')" aria-pressed="false">EN</button>
+        </div>
+        <nav aria-label="Navegación principal">
+          <a href="fotos-carnet.html"><span data-lang="es">Fotos Carnet</span><span data-lang="en" hidden>ID Photos</span></a>
+          <a href="imprimir-fotos.html"><span data-lang="es">Imprimir Fotos</span><span data-lang="en" hidden>Print Photos</span></a>
+          <a href="restauracion-fotos.html"><span data-lang="es">Restauración</span><span data-lang="en" hidden>Restoration</span></a>
+          <a href="atelier.html" aria-current="page">Atelier</a>
+          <a href="estudio.html"><span data-lang="es">Estudio</span><span data-lang="en" hidden>Studio</span></a>
+          <a href="nosotros.html"><span data-lang="es">Nosotros</span><span data-lang="en" hidden>About Us</span></a>
+          <a href="contacto.html"><span data-lang="es">Contacto</span><span data-lang="en" hidden>Contact</span></a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- CABECERA DE PÁGINA -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="breadcrumb">
+        <a href="index.html"><span data-lang="es">Inicio</span><span data-lang="en" hidden>Home</span></a>
+        &nbsp;/&nbsp;
+        <span>Atelier</span>
+      </p>
+      <h1>
+        <span data-lang="es">Atelier — Lienzos, paneles y fotopinturas artesanales</span>
+        <span data-lang="en" hidden>Atelier — Canvas prints, panels and handcrafted photo paintings</span>
+      </h1>
+      <p class="page-geo">Alhama de Murcia &nbsp;&middot;&nbsp; ZONA Fotografía</p>
+      <p class="subtitulo">
+        <span data-lang="es">Todo fabricado aquí, con nuestras manos. Sin proveedores externos, sin intermediarios.</span>
+        <span data-lang="en" hidden>Everything made here, by our hands. No external suppliers, no intermediaries.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- FILOSOFÍA -->
+  <div class="filosofia" role="note">
+    <div class="filosofia-inner">
+      <p>
+        <span data-lang="es">Atelier ZONA Fotografía · Alhama de Murcia</span>
+        <span data-lang="en" hidden>Atelier ZONA Fotografía · Alhama de Murcia</span>
+      </p>
+      <blockquote>
+        <span data-lang="es">En el Atelier todo se hace aquí, con nuestras máquinas y nuestras manos. No enviamos ningún encargo a proveedores externos. Creemos que un fotógrafo que se precie no sólo debe ser artista: ha de cultivar también <strong>el noble oficio del artesano</strong>.</span>
+        <span data-lang="en" hidden>In the Atelier everything is made here, with our equipment and our hands. We send no order to external suppliers. We believe a true photographer must not only be an artist — they must also practise <strong>the noble craft of the artisan</strong>.</span>
+      </blockquote>
+    </div>
+  </div>
+
+  <!-- PRODUCTOS -->
+  <main>
+
+    <!-- 1. PANELES ESPUMADOS -->
+    <section class="producto-seccion" aria-labelledby="tit-paneles">
+      <div class="producto-inner">
+        <div class="producto-imagenes">
+          <div class="imagenes-doble">
+            <img src="Fotos html/Panel 1.jpg" alt="Caballete de madera para panel espumado de sobremesa" loading="lazy">
+            <img src="Fotos html/Panel 2.jpg" alt="Paneles espumados con fotografías en caballetes de sobremesa" loading="lazy">
+          </div>
+        </div>
+        <div class="producto-texto">
+          <span class="producto-etiqueta">
+            <span data-lang="es">Fotografía para decoración</span>
+            <span data-lang="en" hidden>Decorative photography</span>
+          </span>
+          <h2 id="tit-paneles">
+            <span data-lang="es">Paneles espumados</span>
+            <span data-lang="en" hidden>Foam board panels</span>
+          </h2>
+          <div class="separador" aria-hidden="true"></div>
+          <p>
+            <span data-lang="es">Una fotografía impresa montada sobre rígido en panel de espuma. Sin marco, sin cristal, sin peso. Los formatos pequeños son perfectos para el sobremesa con un caballete de madera; los tamaños mayores se cuelgan directamente en la pared.</span>
+            <span data-lang="en" hidden>A photograph printed and mounted on rigid foam board. No frame, no glass, no weight. Small formats are perfect for tabletop display with a wooden easel; larger sizes hang directly on the wall.</span>
+          </p>
+          <p>
+            <span data-lang="es">Listos para poner o colgar en el momento. Una solución elegante, ligera y contemporánea para dar vida a cualquier imagen.</span>
+            <span data-lang="en" hidden>Ready to display or hang straight away. An elegant, lightweight and contemporary solution to bring any image to life.</span>
+          </p>
+          <p class="tamanios-label">
+            <span data-lang="es">Tamaños disponibles</span>
+            <span data-lang="en" hidden>Available sizes</span>
+          </p>
+          <div class="tamanios">
+            <span class="tam">10×15 cm</span>
+            <span class="tam">13×18 cm</span>
+            <span class="tam">15×20 cm</span>
+            <span class="tam">20×30 cm</span>
+            <span class="tam">30×40 cm</span>
+          </div>
+          <a href="https://wa.me/34608397283" class="btn-wa" target="_blank" rel="noopener noreferrer">
+            &#128172; <span data-lang="es">Consultar por WhatsApp</span><span data-lang="en" hidden>Enquire on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. LIENZOS -->
+    <section class="producto-seccion" aria-labelledby="tit-lienzos">
+      <div class="producto-inner invertido">
+        <div class="producto-imagenes">
+          <div class="imagenes-doble">
+            <img src="Fotos html/Lienzo 1.jpg" alt="Detalle de la textura del lienzo de algodón con impresión fotográfica" loading="lazy">
+            <img src="Fotos html/Lienzo 2.jpg" alt="Reverso del lienzo mostrando el bastidor de madera y el tensado del lienzo" loading="lazy">
+          </div>
+        </div>
+        <div class="producto-texto">
+          <span class="producto-etiqueta">
+            <span data-lang="es">Gama alta · Decoración</span>
+            <span data-lang="en" hidden>Premium range · Décor</span>
+          </span>
+          <h2 id="tit-lienzos">
+            <span data-lang="es">Lienzos fotográficos</span>
+            <span data-lang="en" hidden>Photographic canvas prints</span>
+          </h2>
+          <div class="separador" aria-hidden="true"></div>
+          <p>
+            <span data-lang="es">Impresión fotográfica profesional sobre lienzo de algodón, montado y tensado a mano sobre bastidor de madera. El tacto del tejido, la profundidad del color y la solidez de la construcción sitúan este producto en la gama alta de la fotografía para decoración.</span>
+            <span data-lang="en" hidden>Professional photographic printing on cotton canvas, hand-mounted and stretched over a wooden frame. The feel of the fabric, the depth of colour and the solidity of the construction place this product at the high end of decorative photography.</span>
+          </p>
+          <p>
+            <span data-lang="es">Sin cristal, sin marco. La imagen respira. Máxima calidad en impresión y materiales.</span>
+            <span data-lang="en" hidden>No glass, no frame. The image breathes. The highest quality in printing and materials.</span>
+          </p>
+          <p class="tamanios-label">
+            <span data-lang="es">Tamaños disponibles</span>
+            <span data-lang="en" hidden>Available sizes</span>
+          </p>
+          <div class="tamanios">
+            <span class="tam">20×30 cm</span>
+            <span class="tam">30×40 cm</span>
+            <span class="tam">40×50 cm</span>
+            <span class="tam">50×70 cm</span>
+          </div>
+          <a href="https://wa.me/34608397283" class="btn-wa" target="_blank" rel="noopener noreferrer">
+            &#128172; <span data-lang="es">Consultar por WhatsApp</span><span data-lang="en" hidden>Enquire on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. REVELADO EN B&N -->
+    <section class="producto-seccion" aria-labelledby="tit-revelado">
+      <div class="producto-inner">
+        <div class="producto-imagenes">
+          <div class="imagen-cartel">
+            <img src="Fotos html/Revelado BN.jpg" alt="ZONA Fotografía — Carretes y revelado en blanco y negro desde 2006" loading="lazy">
+          </div>
+        </div>
+        <div class="producto-texto">
+          <span class="producto-etiqueta">
+            <span data-lang="es">Servicio exclusivo en la región</span>
+            <span data-lang="en" hidden>Exclusive service in the region</span>
+          </span>
+          <h2 id="tit-revelado">
+            <span data-lang="es">Revelado artesanal en blanco y negro</span>
+            <span data-lang="en" hidden>Artisanal black-and-white film development</span>
+          </h2>
+          <div class="separador" aria-hidden="true"></div>
+          <p>
+            <span data-lang="es">Revelamos película fotográfica en blanco y negro de forma artesanal, con el conocimiento directo de quien lleva trabajando la química de la imagen desde 1988. Un servicio casi exclusivo en la región que muy pocos laboratorios pueden ofrecer hoy.</span>
+            <span data-lang="en" hidden>We develop black-and-white photographic film using artisanal processes, with the direct knowledge of someone who has been working with photographic chemistry since 1988. An almost exclusive service in the region that very few laboratories can offer today.</span>
+          </p>
+          <p>
+            <span data-lang="es">Actualmente revelamos carretes de <strong>35 mm y formato 120</strong> en blanco y negro, en tres modalidades:</span>
+            <span data-lang="en" hidden>We currently develop <strong>35 mm and 120 format</strong> rolls in black and white, with three options:</span>
+          </p>
+          <div class="opciones">
+            <div class="opcion">
+              <span data-lang="es">Solo revelado del carrete</span>
+              <span data-lang="en" hidden>Film development only</span>
+            </div>
+            <div class="opcion">
+              <span data-lang="es">Revelado + digitalización de los negativos</span>
+              <span data-lang="en" hidden>Development + negative digitisation</span>
+            </div>
+            <div class="opcion">
+              <span data-lang="es">Revelado + digitalización + copias en papel</span>
+              <span data-lang="en" hidden>Development + digitisation + paper prints</span>
+            </div>
+          </div>
+          <p class="nota-historica">
+            <span data-lang="es">A lo largo de nuestra trayectoria hemos revelado cianotipias, películas de 16 mm, 35 mm y 120 mm, y placas de cristal. Ese bagaje técnico es el que hoy garantiza la calidad de cada revelado.</span>
+            <span data-lang="en" hidden>Over the years we have developed cyanotypes, 16 mm, 35 mm and 120 mm film, and glass plates. That technical background is what guarantees the quality of every development today.</span>
+          </p>
+          <a href="https://wa.me/34608397283" class="btn-wa" target="_blank" rel="noopener noreferrer">
+            &#128172; <span data-lang="es">Consultar por WhatsApp</span><span data-lang="en" hidden>Enquire on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FOTOPINTURA -->
+    <section class="producto-seccion" aria-labelledby="tit-fotopintura">
+      <div class="producto-inner invertido">
+        <div class="producto-imagenes">
+          <div class="imagenes-doble">
+            <img src="Fotos html/Fotopintura 1.jpg" alt="Fotopintura con efecto de pintura al óleo — detalle de flores" loading="lazy">
+            <img src="Fotos html/Fotopintura 2.jpg" alt="Proceso artesanal de elaboración de fotopintura pincel a pincel" loading="lazy">
+          </div>
+        </div>
+        <div class="producto-texto">
+          <span class="producto-etiqueta">
+            <span data-lang="es">Producto exclusivo · Fabricación propia</span>
+            <span data-lang="en" hidden>Exclusive product · Made in-house</span>
+          </span>
+          <h2 id="tit-fotopintura">
+            <span data-lang="es">Fotopinturas</span>
+            <span data-lang="en" hidden>Photo paintings</span>
+          </h2>
+          <div class="separador" aria-hidden="true"></div>
+          <p>
+            <span data-lang="es">A partir de una fotografía de calidad, la imagen se transforma a mano — pincel digital a pincel digital — hasta conseguir el efecto de una pintura al óleo. No es un filtro automático ni un efecto de aplicación: es trabajo artesanal, detalle a detalle.</span>
+            <span data-lang="en" hidden>Starting from a quality photograph, the image is transformed by hand — digital brushstroke by digital brushstroke — until it achieves the effect of an oil painting. This is not an automatic filter or an app effect: it is artisanal work, detail by detail.</span>
+          </p>
+          <p>
+            <span data-lang="es">Somos especialistas en retratos, aunque trabajamos cualquier motivo. El resultado se imprime sobre lienzo, convirtiendo una fotografía en una pieza única de decoración. La evolución artesanal de la fotografía.</span>
+            <span data-lang="en" hidden>We specialise in portraits, though we work with any subject. The result is printed on canvas, turning a photograph into a unique decorative piece. The artisanal evolution of photography.</span>
+          </p>
+          <p class="tamanios-label">
+            <span data-lang="es">Tamaños disponibles</span>
+            <span data-lang="en" hidden>Available sizes</span>
+          </p>
+          <div class="tamanios">
+            <span class="tam">30×40 cm</span>
+            <span class="tam">40×50 cm</span>
+            <span class="tam">50×70 cm</span>
+          </div>
+          <a href="https://wa.me/34608397283" class="btn-wa" target="_blank" rel="noopener noreferrer">
+            &#128172; <span data-lang="es">Consultar por WhatsApp</span><span data-lang="en" hidden>Enquire on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ÁLBUMES ARTESANALES -->
+    <section class="producto-seccion" aria-labelledby="tit-albums">
+      <div class="producto-inner">
+        <div class="producto-imagenes">
+          <div class="imagen-simple">
+            <img src="Fotos html/Album.jpg" alt="Álbumes fotográficos artesanales con cuero auténtico y páginas cosidas" loading="lazy">
+          </div>
+        </div>
+        <div class="producto-texto">
+          <span class="producto-etiqueta">
+            <span data-lang="es">Encuadernación artesanal</span>
+            <span data-lang="en" hidden>Artisanal bookbinding</span>
+          </span>
+          <h2 id="tit-albums">
+            <span data-lang="es">Álbumes artesanales</span>
+            <span data-lang="en" hidden>Handcrafted albums</span>
+          </h2>
+          <div class="separador" aria-hidden="true"></div>
+          <p>
+            <span data-lang="es">Maquetados, impresos y encuadernados por nosotros con materiales nobles: <strong>cuero auténtico</strong> —no polipiel— y lienzo, con páginas cosidas a mano. En tamaño A4 y con diferentes grosores según el número de páginas.</span>
+            <span data-lang="en" hidden>Designed, printed and bound by us using noble materials: <strong>genuine leather</strong> — not synthetic — and canvas, with hand-sewn pages. Available in A4 size with different thicknesses depending on the number of pages.</span>
+          </p>
+          <p>
+            <span data-lang="es">Un álbum que se fabrica aquí, que se nota en las manos y que dura décadas. No hay dos iguales.</span>
+            <span data-lang="en" hidden>An album made here, that you can feel in your hands and that lasts for decades. No two are alike.</span>
+          </p>
+          <a href="https://wa.me/34608397283" class="btn-wa" target="_blank" rel="noopener noreferrer">
+            &#128172; <span data-lang="es">Consultar por WhatsApp</span><span data-lang="en" hidden>Enquire on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. VHS A MP4 -->
+    <section class="producto-seccion" aria-labelledby="tit-vhs">
+      <div class="producto-inner invertido">
+        <div class="producto-imagenes">
+          <div class="imagen-simple">
+            <img src="Fotos html/VHS.jpg" alt="Cinta VHS — conversión a formato digital MP4 en ZONA Fotografía" loading="lazy">
+          </div>
+        </div>
+        <div class="producto-texto">
+          <span class="producto-etiqueta">
+            <span data-lang="es">Digitalización · Servicio exclusivo en la región</span>
+            <span data-lang="en" hidden>Digitisation · Exclusive service in the region</span>
+          </span>
+          <h2 id="tit-vhs">
+            <span data-lang="es">VHS a MP4 — Tus recuerdos en digital</span>
+            <span data-lang="en" hidden>VHS to MP4 — Your memories in digital</span>
+          </h2>
+          <div class="separador" aria-hidden="true"></div>
+          <p>
+            <span data-lang="es">Convertimos cintas VHS a formato digital MP4, en calidad SD o HD. Un servicio difícil de encontrar en la región — como casi todo lo que hacemos.</span>
+            <span data-lang="en" hidden>We convert VHS tapes to digital MP4 format, in SD or HD quality. A service that is hard to find in the region — like almost everything we do.</span>
+          </p>
+          <p>
+            <span data-lang="es">Si tienes cintas guardadas en un cajón, este es el momento de recuperar esos recuerdos antes de que el soporte se deteriore. Las cintas envejecen. Los recuerdos no deberían hacerlo.</span>
+            <span data-lang="en" hidden>If you have tapes sitting in a drawer, now is the time to rescue those memories before the tape deteriorates. Tapes age. Memories shouldn't have to.</span>
+          </p>
+          <a href="https://wa.me/34608397283" class="btn-wa" target="_blank" rel="noopener noreferrer">
+            &#128172; <span data-lang="es">Consultar por WhatsApp</span><span data-lang="en" hidden>Enquire on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BARRA DE DATOS -->
+  <aside class="barra-datos" aria-label="Información de contacto y horario">
+    <div class="barra-datos-inner">
+      <div class="dato">
+        <h4><span data-lang="es">Dónde estamos</span><span data-lang="en" hidden>Where we are</span></h4>
+        <p>C/ Virgen del Rosario, 5<br>30840 Alhama de Murcia</p>
+        <span class="badge-accesible"><span data-lang="es">&#9855; Accesible en silla de ruedas &middot; Parking adaptado</span><span data-lang="en" hidden>&#9855; Wheelchair accessible &middot; Adapted parking</span></span>
+      </div>
+      <div class="dato">
+        <h4><span data-lang="es">Horario</span><span data-lang="en" hidden>Opening hours</span></h4>
+        <p><span data-lang="es">Lun–Jue: 10:00–13:30 y 17:30–20:00<br>Viernes: 10:00–13:30</span><span data-lang="en" hidden>Mon–Thu: 10:00–13:30 &amp; 17:30–20:00<br>Friday: 10:00–13:30</span></p>
+        <p style="margin-top:0.4rem;font-size:0.78rem;color:#555"><span data-lang="es">Pedidos por WhatsApp: 24/7</span><span data-lang="en" hidden>WhatsApp orders: 24/7</span></p>
+      </div>
+      <div class="dato">
+        <h4><span data-lang="es">Contacto</span><span data-lang="en" hidden>Contact</span></h4>
+        <p><a href="tel:+34608397283">608 39 72 83</a><br><a href="https://wa.me/34608397283" target="_blank" rel="noopener">WhatsApp</a></p>
+      </div>
+      <div class="dato">
+        <h4><span data-lang="es">Valoración en Google</span><span data-lang="en" hidden>Google rating</span></h4>
+        <a href="https://www.google.com/maps/search/ZONA+Fotografía+Alhama+de+Murcia" target="_blank" rel="noopener noreferrer" style="color:#bbbbbb">
+          <p>&#11088; 4,9 / 5</p>
+          <p style="font-size:0.80rem;color:#666;margin-top:0.2rem"><span data-lang="es">46 opiniones verificadas<br><span style="font-size:0.75rem;color:#555">Ver en Google →</span></span><span data-lang="en" hidden>46 verified reviews<br><span style="font-size:0.75rem;color:#555">See on Google →</span></span></p>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 <span>ZONA Fotografía</span> &nbsp;&middot;&nbsp; C/ Virgen del Rosario 5, Alhama de Murcia &nbsp;&middot;&nbsp; <a href="privacidad.html" style="color:#555"><span data-lang="es">Privacidad y forma de trabajo</span><span data-lang="en" hidden>Privacy &amp; how we work</span></a> &nbsp;&middot;&nbsp; <span data-lang="es">Miembros de la Real Sociedad Fotográfica</span><span data-lang="en" hidden>Members of the Royal Photographic Society of Spain</span></p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(function(el) { el.hidden = (el.dataset.lang !== lang); });
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-es').setAttribute('aria-pressed', lang === 'es');
+      document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
+      document.documentElement.lang = lang;
+      localStorage.setItem('zona-lang', lang);
+    }
+    (function() { var s = localStorage.getItem('zona-lang'); if (s && s !== 'es') setLang(s); })();
+  </script>
+
+</body>
+</html>

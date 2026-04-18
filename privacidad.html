@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacidad y forma de trabajo | ZONA Fotografía</title>
+  <meta name="description" content="Cómo gestionamos tus datos y tus imágenes en ZONA Fotografía. Sin complicaciones: solo usamos lo que necesitamos para hacer bien el trabajo.">
+  <link rel="canonical" href="https://zonafotografia.com/privacidad.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="fonts.css">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --negro:      #111111;
+      --texto:      #1C1C1C;
+      --gris-fondo: #F4F2EF;
+      --gris-medio: #888888;
+      --acento:     #8B6914;
+      --acento-cl:  #F0E8D0;
+      --blanco:     #FFFFFF;
+      --max-w:      1200px;
+      --doc-w:      780px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Source Sans 3', system-ui, sans-serif;
+      font-weight: 400;
+      color: var(--texto);
+      background: var(--blanco);
+      line-height: 1.7;
+    }
+
+    img { display: block; max-width: 100%; height: auto; }
+    a   { color: inherit; text-decoration: none; }
+
+    /* ── CABECERA ── */
+    header {
+      background: var(--negro);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid var(--acento);
+    }
+
+    .header-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--blanco);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .logo span { color: var(--acento); }
+
+    .header-right { display: flex; align-items: center; gap: 1rem; }
+
+    .lang-toggle {
+      display: flex;
+      border: 1px solid #333;
+      border-radius: 3px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: #777;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn.active { background: var(--acento); color: #fff; }
+    .lang-btn:hover:not(.active) { background: rgba(255,255,255,0.08); color: #ccc; }
+
+    nav { display: flex; gap: 0.15rem; flex-wrap: wrap; }
+
+    nav a {
+      color: #bbbbbb;
+      font-size: 0.80rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.4rem 0.65rem;
+      border-radius: 3px;
+      transition: color 0.2s, background 0.2s;
+    }
+    nav a:hover { color: var(--blanco); background: rgba(255,255,255,0.09); }
+
+    /* ── DOCUMENTO ── */
+    .doc-wrapper {
+      max-width: var(--doc-w);
+      margin: 0 auto;
+      padding: 4rem 1.5rem 5rem;
+    }
+
+    .doc-intro {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 400;
+      color: var(--negro);
+      line-height: 1.25;
+      margin-bottom: 1.5rem;
+    }
+
+    .doc-lead {
+      font-size: 1.05rem;
+      color: #444;
+      margin-bottom: 2.5rem;
+      line-height: 1.75;
+      border-bottom: 1px solid #e8e5e0;
+      padding-bottom: 2.5rem;
+    }
+
+    /* ── SECCIONES ── */
+    .doc-seccion {
+      margin-bottom: 3rem;
+    }
+
+    .doc-seccion h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--negro);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .doc-seccion h2::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 2px;
+      background: var(--acento);
+      flex-shrink: 0;
+    }
+
+    .doc-seccion p {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 1rem;
+      line-height: 1.75;
+    }
+
+    .doc-seccion ul {
+      list-style: none;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .doc-seccion ul li {
+      font-size: 1rem;
+      color: #333;
+      padding: 0.45rem 0 0.45rem 1.5rem;
+      position: relative;
+      line-height: 1.65;
+      border-bottom: 1px solid #f0ede8;
+    }
+    .doc-seccion ul li:last-child { border-bottom: none; }
+
+    .doc-seccion ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--acento);
+    }
+
+    /* Nota neutra */
+    .nota {
+      background: var(--gris-fondo);
+      border-left: 3px solid var(--acento);
+      padding: 1.1rem 1.4rem;
+      margin: 1.25rem 0;
+      border-radius: 0 3px 3px 0;
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    /* Nota fuerte (privacidad de imágenes) */
+    .nota-fuerte {
+      background: var(--negro);
+      color: #ccc;
+      padding: 1.3rem 1.6rem;
+      margin: 1.25rem 0;
+      border-left: 3px solid var(--acento);
+      border-radius: 0 3px 3px 0;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .nota-fuerte strong { color: var(--acento-cl); }
+
+    /* ── VOLVER ── */
+    .volver {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e8e5e0;
+      font-size: 0.90rem;
+    }
+    .volver a { color: var(--acento); font-weight: 600; }
+    .volver a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0a0a0a;
+      border-top: 1px solid #222;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.80rem;
+      color: #555;
+    }
+    footer span { color: var(--acento); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 820px) {
+      .header-inner { height: auto; flex-direction: column; padding: 0.9rem 1.5rem; gap: 0.6rem; }
+      .header-right { flex-wrap: wrap; justify-content: center; }
+      nav { justify-content: center; }
+    }
+
+    @media (max-width: 600px) {
+      .doc-wrapper { padding: 2.5rem 1.2rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CABECERA ================================================= -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="ZONA Fotografía — Inicio">
+        ZONA <span>Fotografía</span>
+      </a>
+      <div class="header-right">
+        <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+          <button class="lang-btn active" id="btn-es" onclick="setLang('es')" aria-pressed="true">ES</button>
+          <button class="lang-btn"        id="btn-en" onclick="setLang('en')" aria-pressed="false">EN</button>
+        </div>
+        <nav aria-label="Navegación principal">
+          <a href="fotos-carnet.html">
+            <span data-lang="es">Fotos Carnet</span>
+            <span data-lang="en" hidden>ID Photos</span>
+          </a>
+          <a href="imprimir-fotos.html">
+            <span data-lang="es">Imprimir Fotos</span>
+            <span data-lang="en" hidden>Print Photos</span>
+          </a>
+          <a href="restauracion-fotos.html">
+            <span data-lang="es">Restauración</span>
+            <span data-lang="en" hidden>Restoration</span>
+          </a>
+          <a href="atelier.html">Atelier</a>
+          <a href="estudio.html">
+            <span data-lang="es">Estudio</span>
+            <span data-lang="en" hidden>Studio</span>
+          </a>
+          <a href="nosotros.html">
+            <span data-lang="es">Nosotros</span>
+            <span data-lang="en" hidden>About Us</span>
+          </a>
+          <a href="contacto.html">
+            <span data-lang="es">Contacto</span>
+            <span data-lang="en" hidden>Contact</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- DOCUMENTO ================================================ -->
+  <div class="doc-wrapper" role="main">
+
+    <h1 class="doc-intro">
+      <span data-lang="es">Privacidad y forma de trabajo</span>
+      <span data-lang="en" hidden>Privacy &amp; how we work</span>
+    </h1>
+
+    <p class="doc-lead">
+      <span data-lang="es">En ZONA Fotografía nos gusta que las cosas estén claras desde el principio. Esta página explica qué hacemos con la información que nos das, cómo gestionamos tus imágenes y cómo nos gusta trabajar. Sin letra pequeña.</span>
+      <span data-lang="en" hidden>At ZONA Fotografía we like things to be clear from the start. This page explains what we do with the information you give us, how we handle your images, and how we like to work. No small print.</span>
+    </p>
+
+    <!-- 1. DATOS -->
+    <div class="doc-seccion">
+      <h2>
+        <span data-lang="es">Lo que sabemos de ti</span>
+        <span data-lang="en" hidden>What we know about you</span>
+      </h2>
+      <p>
+        <span data-lang="es">Cuando nos traes un encargo, lo normal es que nos des tu nombre y un teléfono — lo justo para avisarte cuando está listo o para aclarar algún detalle. Nada más. No te pedimos correo electrónico si no es necesario, no guardamos historiales de compra más allá de lo que necesitamos para hacer el trabajo, y no tenemos formularios online donde introduces datos.</span>
+        <span data-lang="en" hidden>When you bring us an order, you usually give us your name and a phone number — just enough to let you know when it's ready or to clarify a detail. Nothing more. We don't ask for an email address if it isn't needed, we don't keep purchase histories beyond what's required to complete the work, and we have no online forms where you enter data.</span>
+      </p>
+      <p>
+        <span data-lang="es">Si nos escribes por WhatsApp — que es la forma habitual de contacto — tu número queda registrado en la aplicación, como en cualquier conversación de WhatsApp. Lo usamos para responderte y, si procede, para avisarte de que tu pedido está listo. No lo usamos para nada más.</span>
+        <span data-lang="en" hidden>If you contact us via WhatsApp — which is the usual way — your number is stored in the app, as in any WhatsApp conversation. We use it to reply to you and, where relevant, to notify you that your order is ready. We use it for nothing else.</span>
+      </p>
+      <div class="nota">
+        <span data-lang="es">Nunca cedemos datos a terceros. Lo que nos cuentas o nos traes se queda aquí.</span>
+        <span data-lang="en" hidden>We never share data with third parties. What you tell us or bring us stays here.</span>
+      </div>
+    </div>
+
+    <!-- 2. IMÁGENES -->
+    <div class="doc-seccion">
+      <h2>
+        <span data-lang="es">Tus fotos son tuyas</span>
+        <span data-lang="en" hidden>Your photos belong to you</span>
+      </h2>
+      <p>
+        <span data-lang="es">Las imágenes que nos traes para imprimir, restaurar o encuadrar son tuyas. Las que hacemos en el estudio son tuyas. Las que revela el laboratorio son tuyas. Esto puede parecer obvio, pero vale la pena decirlo en voz alta.</span>
+        <span data-lang="en" hidden>The images you bring us to print, restore or frame are yours. The ones we shoot in the studio are yours. The ones the lab develops are yours. This may seem obvious, but it's worth saying out loud.</span>
+      </p>
+      <div class="nota-fuerte">
+        <strong>
+          <span data-lang="es">ZONA Fotografía no publica imágenes de sus clientes.</span>
+          <span data-lang="en" hidden>ZONA Fotografía does not publish clients' images.</span>
+        </strong><br>
+        <span data-lang="es">Ni en la web, ni en redes sociales, ni en el escaparate. No pedimos permiso para usarlas porque directamente no las usamos. Lo que entra por esa puerta no sale sin que tú lo decidas.</span>
+        <span data-lang="en" hidden>Not on the website, not on social media, not in the window display. We don't ask permission to use them because we simply don't use them. What comes through that door does not leave without your decision.</span>
+      </div>
+      <p>
+        <span data-lang="es">Las imágenes que manejamos para completar un encargo se conservan el tiempo razonable para gestionar posibles incidencias y se eliminan cuando ya no son necesarias. No tenemos archivo de los trabajos de nuestros clientes.</span>
+        <span data-lang="en" hidden>Images we handle to complete an order are kept for a reasonable period to manage any issues, and deleted once no longer needed. We do not keep an archive of our clients' work.</span>
+      </p>
+    </div>
+
+    <!-- 3. FORMA DE TRABAJAR -->
+    <div class="doc-seccion">
+      <h2>
+        <span data-lang="es">Cómo nos gusta trabajar</span>
+        <span data-lang="en" hidden>How we like to work</span>
+      </h2>
+      <p>
+        <span data-lang="es">A lo largo de los años hemos aprendido qué funciona y qué no. Esto es lo que define la forma en que operamos — no como imposición, sino como honestidad por adelantado:</span>
+        <span data-lang="en" hidden>Over the years we have learned what works and what doesn't. This defines how we operate — not as a set of rules, but as honesty upfront:</span>
+      </p>
+      <ul>
+        <li>
+          <span data-lang="es"><strong>Todos los encargos se pagan por adelantado.</strong> Así podemos dedicar el tiempo y los materiales que cada trabajo merece sin tener que estar pendientes de otra cosa. Se aplica a pedidos pequeños y a proyectos grandes.</span>
+          <span data-lang="en" hidden><strong>All orders are paid in advance.</strong> This allows us to dedicate the time and materials each job deserves without having to worry about anything else. It applies to small orders and large projects alike.</span>
+        </li>
+        <li>
+          <span data-lang="es"><strong>No trabajamos con prisa.</strong> Un encargo bien hecho necesita el tiempo que necesita. Si tienes una fecha límite, cuéntanosla desde el principio y haremos todo lo posible, pero no prometemos lo que no podemos cumplir.</span>
+          <span data-lang="en" hidden><strong>We don't work under pressure.</strong> A job well done takes the time it takes. If you have a deadline, tell us from the start and we'll do our best — but we don't promise what we can't deliver.</span>
+        </li>
+        <li>
+          <span data-lang="es"><strong>En los trabajos artísticos, el criterio fotográfico es nuestro.</strong> Si nos encargas una sesión de estudio o un trabajo creativo, buscamos el mejor resultado posible con nuestro criterio y experiencia. Lo hablamos antes de empezar y lo decidimos juntos.</span>
+          <span data-lang="en" hidden><strong>In creative work, the photographic judgement is ours.</strong> If you commission a studio session or a creative project, we pursue the best possible result using our own criteria and experience. We discuss it before starting and decide together.</span>
+        </li>
+        <li>
+          <span data-lang="es"><strong>Los materiales los elegimos nosotros.</strong> Tanto en álbumes, lienzos u otros productos artesanales, la selección de materiales responde a criterios de calidad y durabilidad, no de coste.</span>
+          <span data-lang="en" hidden><strong>We choose the materials.</strong> Whether for albums, canvases or other handcrafted products, the choice of materials is guided by quality and durability, not cost.</span>
+        </li>
+      </ul>
+      <div class="nota">
+        <span data-lang="es">Si algo de lo anterior te genera alguna duda antes de hacer un encargo, pregúntanos. Preferimos aclarar las cosas desde el principio.</span>
+        <span data-lang="en" hidden>If anything above raises a question before you place an order, ask us. We'd rather sort things out from the start.</span>
+      </div>
+    </div>
+
+    <!-- 4. COOKIES -->
+    <div class="doc-seccion">
+      <h2>
+        <span data-lang="es">Cookies y datos de navegación</span>
+        <span data-lang="en" hidden>Cookies and browsing data</span>
+      </h2>
+      <p>
+        <span data-lang="es">Esta web no usa cookies de seguimiento, de publicidad ni de analítica. No sabe cuántas veces la has visitado ni desde dónde lo has hecho.</span>
+        <span data-lang="en" hidden>This website uses no tracking, advertising or analytics cookies. It does not know how many times you have visited or where you visited from.</span>
+      </p>
+      <p>
+        <span data-lang="es">Lo único que la web guarda en tu navegador es tu preferencia de idioma (español o inglés), mediante <em>localStorage</em> — una tecnología local que funciona únicamente en tu propio dispositivo y no envía ningún dato a ningún servidor. Si borras los datos de navegación, se borra también esa preferencia y la próxima vez la web volverá al español.</span>
+        <span data-lang="en" hidden>The only thing the website stores in your browser is your language preference (Spanish or English), using <em>localStorage</em> — a local technology that works only on your own device and sends no data to any server. If you clear your browsing data, that preference is also cleared and the site will default to Spanish next time.</span>
+      </p>
+      <p>
+        <span data-lang="es">Eso es todo. Sin rastreos, sin perfiles, sin publicidad personalizada.</span>
+        <span data-lang="en" hidden>That's all. No tracking, no profiling, no targeted advertising.</span>
+      </p>
+    </div>
+
+    <!-- 5. CONTACTO -->
+    <div class="doc-seccion">
+      <h2>
+        <span data-lang="es">Si tienes alguna pregunta</span>
+        <span data-lang="en" hidden>If you have any questions</span>
+      </h2>
+      <p>
+        <span data-lang="es">Si quieres saber qué información tenemos sobre ti, pedir que la eliminemos o simplemente preguntarnos algo sobre cómo trabajamos, escríbenos por WhatsApp al <a href="https://wa.me/34608397283" style="color:var(--acento)">608 39 72 83</a> o pásate por la tienda. No hay formularios ni buzones de reclamaciones: somos personas, y preferimos hablar.</span>
+        <span data-lang="en" hidden>If you'd like to know what information we hold about you, request its deletion, or simply ask us something about how we work, write to us on WhatsApp at <a href="https://wa.me/34608397283" style="color:var(--acento)">608 39 72 83</a> or come by the shop. There are no forms or complaint boxes: we're people, and we prefer to talk.</span>
+      </p>
+    </div>
+
+    <div class="volver">
+      <a href="index.html">
+        <span data-lang="es">← Volver a ZONA Fotografía</span>
+        <span data-lang="en" hidden>← Back to ZONA Fotografía</span>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER =================================================== -->
+  <footer>
+    <p>
+      &copy; 2026 <span>ZONA Fotografía</span>
+      &nbsp;&middot;&nbsp; C/ Virgen del Rosario 5, Alhama de Murcia
+      &nbsp;&middot;&nbsp;
+      <span data-lang="es">Miembros de la Real Sociedad Fotográfica</span>
+      <span data-lang="en" hidden>Members of the Royal Photographic Society of Spain</span>
+    </p>
+  </footer>
+
+  <!-- SCRIPT DE IDIOMA ========================================= -->
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(function(el) {
+        el.hidden = (el.dataset.lang !== lang);
+      });
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-es').setAttribute('aria-pressed', lang === 'es');
+      document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
+      document.documentElement.lang = lang;
+      localStorage.setItem('zona-lang', lang);
+    }
+
+    (function() {
+      var saved = localStorage.getItem('zona-lang');
+      if (saved && saved !== 'es') setLang(saved);
+    })();
+  </script>
+
+</body>
+</html>

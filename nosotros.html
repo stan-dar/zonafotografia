@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiénes somos | ZONA Fotografía — Alhama de Murcia desde 2006</title>
+  <meta name="description" content="Juan Fernando Sánchez, fotógrafo e impresor en Alhama de Murcia desde 1988. La historia de ZONA Fotografía: laboratorio, estudio y tienda desde 2006.">
+  <link rel="canonical" href="https://zonafotografia.com/nosotros.html">
+
+  <meta property="og:title" content="Quiénes somos | ZONA Fotografía, Alhama de Murcia">
+  <meta property="og:description" content="Juan Fernando Sánchez, fotógrafo e impresor en Alhama de Murcia. La historia de ZONA Fotografía desde 2006.">
+  <meta property="og:url" content="https://zonafotografia.com/nosotros.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://zonafotografia.com/Nosotros/Juan Fernando.jpg">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="fonts.css">
+
+  <style>
+    /* ============================================================
+       VARIABLES Y RESET
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --negro:      #111111;
+      --texto:      #1C1C1C;
+      --gris-fondo: #F4F2EF;
+      --gris-medio: #888888;
+      --acento:     #8B6914;
+      --acento-cl:  #F0E8D0;
+      --blanco:     #FFFFFF;
+      --max-w:      1200px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Source Sans 3', system-ui, sans-serif;
+      font-weight: 400;
+      color: var(--texto);
+      background: var(--blanco);
+      line-height: 1.65;
+    }
+
+    img { display: block; max-width: 100%; height: auto; }
+    a   { color: inherit; text-decoration: none; }
+
+    /* ============================================================
+       CABECERA
+    ============================================================ */
+    header {
+      background: var(--negro);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid var(--acento);
+    }
+
+    .header-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--blanco);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .logo span { color: var(--acento); }
+
+    .header-right { display: flex; align-items: center; gap: 1rem; }
+
+    .lang-toggle {
+      display: flex;
+      border: 1px solid #333;
+      border-radius: 3px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: #777;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 0.3rem 0.6rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn.active { background: var(--acento); color: #fff; }
+    .lang-btn:hover:not(.active) { background: rgba(255,255,255,0.08); color: #ccc; }
+
+    nav { display: flex; gap: 0.15rem; flex-wrap: wrap; }
+
+    nav a {
+      color: #bbbbbb;
+      font-size: 0.80rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.4rem 0.65rem;
+      border-radius: 3px;
+      transition: color 0.2s, background 0.2s;
+    }
+    nav a:hover { color: var(--blanco); background: rgba(255,255,255,0.09); }
+    nav a[aria-current="page"] { color: var(--acento); }
+
+    /* ============================================================
+       CABECERA DE PÁGINA
+    ============================================================ */
+    .page-header {
+      background: var(--negro);
+      border-bottom: 1px solid #222;
+      padding: 2.5rem 1.5rem 2rem;
+    }
+
+    .page-header-inner { max-width: var(--max-w); margin: 0 auto; }
+
+    .breadcrumb {
+      font-size: 0.78rem;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+    .breadcrumb a { color: #666; transition: color 0.2s; }
+    .breadcrumb a:hover { color: #999; }
+    .breadcrumb span { color: var(--acento); }
+
+    .page-header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 400;
+      color: var(--blanco);
+      line-height: 1.2;
+      max-width: 700px;
+    }
+
+    .page-header .page-geo {
+      margin-top: 0.5rem;
+      font-family: 'Source Sans 3', system-ui, sans-serif;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--acento);
+    }
+
+    .page-header .subtitulo {
+      margin-top: 0.75rem;
+      color: #999;
+      font-size: 1rem;
+      max-width: 620px;
+    }
+
+    /* ============================================================
+       BIO PRINCIPAL
+    ============================================================ */
+    .contenido {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .texto-principal h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    .texto-principal p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #333;
+      margin-bottom: 1.25rem;
+    }
+
+    .separador {
+      width: 44px;
+      height: 2px;
+      background: var(--acento);
+      margin: 1.5rem 0;
+    }
+
+    .rsf-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--gris-fondo);
+      border-left: 3px solid var(--acento);
+      padding: 0.9rem 1.2rem;
+      margin-top: 0.5rem;
+      font-size: 0.88rem;
+      color: #444;
+      border-radius: 0 3px 3px 0;
+    }
+    .rsf-badge strong { color: var(--negro); display: block; margin-bottom: 0.15rem; font-size: 0.92rem; }
+
+    /* Foto Juan Fernando */
+    .lateral {
+      position: sticky;
+      top: 84px;
+    }
+
+    .lateral img {
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    .lateral-caption {
+      font-size: 0.80rem;
+      color: var(--gris-medio);
+      text-align: center;
+      margin-top: 0.75rem;
+      font-style: italic;
+    }
+
+    /* ============================================================
+       LÍNEA DE TIEMPO
+    ============================================================ */
+    .timeline-seccion {
+      background: var(--gris-fondo);
+      padding: 3.5rem 1.5rem;
+    }
+
+    .timeline-inner { max-width: var(--max-w); margin: 0 auto; }
+
+    .timeline-inner h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    .sep { width: 44px; height: 2px; background: var(--acento); margin: 0.75rem 0 2.5rem; }
+
+    .timeline {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 80px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--acento), rgba(139,105,20,0.15));
+    }
+
+    .tl-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 0 2rem;
+      padding: 1.1rem 0;
+      position: relative;
+    }
+
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: 73px;
+      top: 1.6rem;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--acento);
+      border: 3px solid var(--gris-fondo);
+      z-index: 1;
+    }
+
+    .tl-year {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--acento);
+      line-height: 1.9;
+      text-align: right;
+      padding-right: 0.5rem;
+    }
+
+    .tl-texto {
+      padding-left: 1.5rem;
+    }
+
+    .tl-titulo {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--negro);
+      display: block;
+      margin-bottom: 0.2rem;
+      line-height: 1.9;
+    }
+
+    .tl-desc {
+      font-size: 0.88rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* ============================================================
+       FOTOS HISTÓRICAS
+    ============================================================ */
+    .historicas {
+      padding: 4rem 1.5rem;
+    }
+
+    .historicas-inner { max-width: var(--max-w); margin: 0 auto; }
+
+    .historicas h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    .historicas .sep { margin-bottom: 2rem; }
+
+    .historicas-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .historica-item img {
+      width: 100%;
+      border-radius: 3px;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+    }
+
+    .historica-caption {
+      font-size: 0.80rem;
+      color: var(--gris-medio);
+      margin-top: 0.6rem;
+      font-style: italic;
+      text-align: center;
+    }
+
+    /* ============================================================
+       GALERÍA EXTERNA
+    ============================================================ */
+    .galeria-bloque {
+      background: var(--negro);
+      color: var(--blanco);
+      padding: 4rem 1.5rem;
+    }
+
+    .galeria-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .galeria-texto p.etiqueta {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: var(--acento);
+      margin-bottom: 0.9rem;
+      font-weight: 700;
+    }
+
+    .galeria-texto h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 400;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+
+    .galeria-texto p {
+      font-size: 0.97rem;
+      color: #ccc;
+      line-height: 1.7;
+      max-width: 60ch;
+    }
+
+    .btn-galeria {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      border: 1px solid var(--acento);
+      color: var(--acento-cl);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.9rem 2rem;
+      border-radius: 3px;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .btn-galeria:hover { background: var(--acento); color: var(--blanco); }
+
+    /* ============================================================
+       BARRA DE DATOS
+    ============================================================ */
+    .barra-datos {
+      background: var(--negro);
+      color: #bbbbbb;
+      padding: 2.75rem 1.5rem;
+      border-top: 1px solid #1e1e1e;
+    }
+
+    .barra-datos-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .dato h4 {
+      font-size: 0.70rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--acento);
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+    }
+    .dato p  { font-size: 0.90rem; line-height: 1.65; }
+    .dato a  { color: #bbbbbb; transition: color 0.2s; }
+    .dato a:hover { color: var(--blanco); }
+    .badge-accesible { display: inline-block; margin-top: 0.5rem; font-size: 0.75rem; color: #666; }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      background: #0a0a0a;
+      border-top: 1px solid #222;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.80rem;
+      color: #555;
+    }
+    footer span { color: var(--acento); }
+    footer a { color: #555; transition: color 0.2s; }
+    footer a:hover { color: var(--acento); }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 820px) {
+      .header-inner { height: auto; flex-direction: column; padding: 0.9rem 1.5rem; gap: 0.6rem; }
+      .header-right { flex-wrap: wrap; justify-content: center; }
+      nav { justify-content: center; }
+      .contenido { grid-template-columns: 1fr; gap: 2rem; }
+      .lateral { position: static; max-width: 280px; margin: 0 auto; }
+      .timeline::before { left: 60px; }
+      .tl-item { grid-template-columns: 60px 1fr; }
+      .tl-item::before { left: 53px; }
+      .historicas-grid { grid-template-columns: 1fr 1fr; }
+      .galeria-inner { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 540px) {
+      .historicas-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <!-- Schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PhotographyBusiness",
+    "name": "ZONA Fotografía",
+    "image": "https://zonafotografia.com/Nosotros/Juan Fernando.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C/ Virgen del Rosario, 5, Bajos 1 y 2",
+      "addressLocality": "Alhama de Murcia",
+      "addressRegion": "Murcia",
+      "postalCode": "30840",
+      "addressCountry": "ES"
+    },
+    "telephone": "+34608397283",
+    "url": "https://zonafotografia.com/nosotros.html",
+    "foundingDate": "2006",
+    "founder": {
+      "@type": "Person",
+      "name": "Juan Fernando Sánchez Hernández"
+    },
+    "description": "Estudio fotográfico en Alhama de Murcia desde 2006. Fotografía profesional, laboratorio DryLab y miembros de la Real Sociedad Fotográfica. Propietario: Juan Fernando Sánchez Hernández.",
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Real Sociedad Fotográfica"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- CABECERA ================================================= -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="ZONA Fotografía — Inicio">
+        ZONA <span>Fotografía</span>
+      </a>
+      <div class="header-right">
+        <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+          <button class="lang-btn active" id="btn-es" onclick="setLang('es')" aria-pressed="true">ES</button>
+          <button class="lang-btn"        id="btn-en" onclick="setLang('en')" aria-pressed="false">EN</button>
+        </div>
+        <nav aria-label="Navegación principal">
+          <a href="fotos-carnet.html">
+            <span data-lang="es">Fotos Carnet</span>
+            <span data-lang="en" hidden>ID Photos</span>
+          </a>
+          <a href="imprimir-fotos.html">
+            <span data-lang="es">Imprimir Fotos</span>
+            <span data-lang="en" hidden>Print Photos</span>
+          </a>
+          <a href="restauracion-fotos.html">
+            <span data-lang="es">Restauración</span>
+            <span data-lang="en" hidden>Restoration</span>
+          </a>
+          <a href="atelier.html">Atelier</a>
+          <a href="estudio.html">
+            <span data-lang="es">Estudio</span>
+            <span data-lang="en" hidden>Studio</span>
+          </a>
+          <a href="nosotros.html" aria-current="page">
+            <span data-lang="es">Nosotros</span>
+            <span data-lang="en" hidden>About Us</span>
+          </a>
+          <a href="contacto.html">
+            <span data-lang="es">Contacto</span>
+            <span data-lang="en" hidden>Contact</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- CABECERA DE PÁGINA ======================================= -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <p class="breadcrumb">
+        <a href="index.html">
+          <span data-lang="es">Inicio</span>
+          <span data-lang="en" hidden>Home</span>
+        </a>
+        &nbsp;/&nbsp;
+        <span>
+          <span data-lang="es">Nosotros</span>
+          <span data-lang="en" hidden>About us</span>
+        </span>
+      </p>
+      <h1>
+        <span data-lang="es">Quiénes somos</span>
+        <span data-lang="en" hidden>About us</span>
+      </h1>
+      <p class="page-geo">Alhama de Murcia &nbsp;&middot;&nbsp; ZONA Fotografía</p>
+      <p class="subtitulo">
+        <span data-lang="es">La historia de una tienda que empezó siendo dos cosas a la vez y acabó siendo una sola: fotografía</span>
+        <span data-lang="en" hidden>The story of a shop that started as two things at once and ended up as one: photography</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- BIO PRINCIPAL ============================================ -->
+  <main>
+    <div class="contenido">
+
+      <div class="texto-principal">
+
+        <h2>
+          <span data-lang="es">Juan Fernando Sánchez Hernández</span>
+          <span data-lang="en" hidden>Juan Fernando Sánchez Hernández</span>
+        </h2>
+
+        <p>
+          <span data-lang="es">Nació en Alhama de Murcia. Con diecisiete años empezó a fotografiar — una Yashica FX3 fue la primera cámara — y montó en casa su propio laboratorio de blanco y negro. La fotografía nunca fue un pasatiempo: desde el principio fue una forma de entender el mundo.</span>
+          <span data-lang="en" hidden>He was born in Alhama de Murcia. At seventeen he began to photograph — a Yashica FX3 was the first camera — and set up his own black-and-white darkroom at home. Photography was never a hobby: from the beginning it was a way of understanding the world.</span>
+        </p>
+
+        <p>
+          <span data-lang="es">En 1998 comenzó su carrera como fotoperiodista para el diario <em>La Opinión de Murcia</em>, cubriendo eventos locales y regionales durante años. Ese trabajo de campo — la prisa, la luz difícil, el momento que no se repite — forjó una mirada que todavía define la forma en que ZONA Fotografía trabaja hoy.</span>
+          <span data-lang="en" hidden>In 1998 he began his career as a photojournalist for the newspaper <em>La Opinión de Murcia</em>, covering local and regional events for years. That fieldwork — the rush, the difficult light, the unrepeatable moment — shaped a way of seeing that still defines how ZONA Fotografía works today.</span>
+        </p>
+
+        <p>
+          <span data-lang="es">Antes de abrir la tienda, trabajó durante años como técnico informático en dos empresas de la comarca — Microplus y Neox PC —, lo que explica por qué en 2006 el negocio se llamó ZONA Informática y Fotografía: dos oficios bajo el mismo techo, atendidos con el mismo rigor.</span>
+          <span data-lang="en" hidden>Before opening the shop, he worked for years as an IT technician at two local companies — Microplus and Neox PC —, which explains why in 2006 the business was called ZONA Informática y Fotografía: two trades under the same roof, approached with the same standards.</span>
+        </p>
+
+        <p>
+          <span data-lang="es">Con el paso de los años, la demanda fue cambiando. La llegada de los smartphones transformó lo que los clientes necesitaban de una tienda fotográfica. En 2016, el nombre pasó a ser ZONA Fotografía: no fue una ruptura sino el reconocimiento de algo que ya era evidente desde el principio. El mismo comercio, la misma dirección, una sola identidad.</span>
+          <span data-lang="en" hidden>Over the years, demand shifted. The arrival of smartphones transformed what clients needed from a photography shop. In 2016, the name became ZONA Fotografía: not a break, but the acknowledgement of something that had been evident from the beginning. The same business, the same address, one single identity.</span>
+        </p>
+
+        <div class="separador" aria-hidden="true"></div>
+
+        <p>
+          <span data-lang="es">Hoy ZONA Fotografía es una tienda de fotografía en sentido completo: impresión profesional en papel, fotos para documentos, restauración de imágenes antiguas, laboratorio de revelado en blanco y negro, estudio de retrato y sesiones artísticas en película de formato medio. Todo bajo el mismo techo, con las mismas manos.</span>
+          <span data-lang="en" hidden>Today ZONA Fotografía is a photography shop in the full sense: professional paper printing, ID photos, restoration of old images, black-and-white darkroom, portrait studio and artistic sessions on medium format film. All under the same roof, with the same hands.</span>
+        </p>
+
+        <p>
+          <span data-lang="es">Fuera de la tienda, desde hace unos años compagina su actividad en ZONA Fotografía con el fotoperiodismo en eventos oficiales para el <strong>Ayuntamiento de Alhama de Murcia</strong> y como operador de cámara para <strong>Avatel Televisión — Tele Alhama</strong>. La cámara, en cualquier formato y en cualquier contexto.</span>
+          <span data-lang="en" hidden>Beyond the shop, for some years now he has combined his work at ZONA Fotografía with photojournalism at official events for <strong>Alhama de Murcia Town Hall</strong> and as a camera operator for <strong>Avatel Televisión — Tele Alhama</strong>. The camera, in any format and any context.</span>
+        </p>
+
+        <div class="rsf-badge" role="note">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8B6914" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+          <div>
+            <strong>
+              <span data-lang="es">Miembros de la Real Sociedad Fotográfica</span>
+              <span data-lang="en" hidden>Members of the Royal Photographic Society of Spain</span>
+            </strong>
+            <span data-lang="es" style="font-size:0.82rem; color:#666">La sociedad fotográfica de referencia en España desde 1899</span>
+            <span data-lang="en" hidden style="font-size:0.82rem; color:#666">Spain's leading photographic society since 1899</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FOTO JUAN FERNANDO ----------------------------------- -->
+      <aside class="lateral" aria-label="Fotografía de Juan Fernando Sánchez">
+        <img
+          src="Nosotros/Juan Fernando.jpg"
+          alt="Juan Fernando Sánchez Hernández — fotógrafo e impresor, fundador de ZONA Fotografía en Alhama de Murcia"
+          width="480" height="640">
+        <p class="lateral-caption">
+          <span data-lang="es">Juan Fernando Sánchez &mdash; fundador</span>
+          <span data-lang="en" hidden>Juan Fernando Sánchez &mdash; founder</span>
+        </p>
+      </aside>
+
+    </div>
+
+    <!-- LÍNEA DE TIEMPO ======================================= -->
+    <section class="timeline-seccion" aria-labelledby="tit-timeline">
+      <div class="timeline-inner">
+
+        <h2 id="tit-timeline">
+          <span data-lang="es">La historia, año a año</span>
+          <span data-lang="en" hidden>The history, year by year</span>
+        </h2>
+        <div class="sep" aria-hidden="true"></div>
+
+        <div class="timeline" role="list">
+
+          <div class="tl-item" role="listitem">
+            <div class="tl-year">1988</div>
+            <div class="tl-texto">
+              <span class="tl-titulo">
+                <span data-lang="es">El principio</span>
+                <span data-lang="en" hidden>The beginning</span>
+              </span>
+              <p class="tl-desc">
+                <span data-lang="es">Primera cámara — una Yashica FX3 — y primer laboratorio de blanco y negro montado en casa. Desde entonces, la fotografía química nunca se ha abandonado.</span>
+                <span data-lang="en" hidden>First camera — a Yashica FX3 — and the first black-and-white darkroom set up at home. From then on, film photography was never abandoned.</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="tl-item" role="listitem">
+            <div class="tl-year">1998</div>
+            <div class="tl-texto">
+              <span class="tl-titulo">
+                <span data-lang="es">Fotoperiodismo profesional</span>
+                <span data-lang="en" hidden>Professional photojournalism</span>
+              </span>
+              <p class="tl-desc">
+                <span data-lang="es">Inicio de la carrera como fotoperiodista para el diario <em>La Opinión de Murcia</em>. Años de trabajo de campo, luz difícil y momentos que no se repiten.</span>
+                <span data-lang="en" hidden>Start of a career as photojournalist for <em>La Opinión de Murcia</em>. Years of fieldwork, difficult light and moments that do not repeat.</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="tl-item" role="listitem">
+            <div class="tl-year">2006</div>
+            <div class="tl-texto">
+              <span class="tl-titulo">
+                <span data-lang="es">Nace ZONA Informática y Fotografía</span>
+                <span data-lang="en" hidden>ZONA Informática y Fotografía opens</span>
+              </span>
+              <p class="tl-desc">
+                <span data-lang="es">Se abre la tienda en la Calle Virgen del Rosario combinando asistencia informática y fotografía profesional bajo el mismo techo.</span>
+                <span data-lang="en" hidden>The shop opens on Calle Virgen del Rosario combining IT support and professional photography under the same roof.</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="tl-item" role="listitem">
+            <div class="tl-year">2008</div>
+            <div class="tl-texto">
+              <span class="tl-titulo">
+                <span data-lang="es">Escuela de fotografía</span>
+                <span data-lang="en" hidden>Photography school</span>
+              </span>
+              <p class="tl-desc">
+                <span data-lang="es">Comienzo de las clases particulares de fotografía digital, que han acompañado a la tienda desde entonces.</span>
+                <span data-lang="en" hidden>Private digital photography classes begin, a service that has been part of the shop ever since.</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="tl-item" role="listitem">
+            <div class="tl-year">2016</div>
+            <div class="tl-texto">
+              <span class="tl-titulo">
+                <span data-lang="es">ZONA Fotografía</span>
+                <span data-lang="en" hidden>ZONA Fotografía</span>
+              </span>
+              <p class="tl-desc">
+                <span data-lang="es">Con los smartphones cambiando el mercado, la tienda actualiza su nombre para reflejar lo que siempre había sido su núcleo. Ese mismo año, se convierte en el primer laboratorio DryLab del Bajo Guadalentín, apostando por la impresión en papel fotográfico profesional.</span>
+                <span data-lang="en" hidden>With smartphones reshaping the market, the shop updates its name to reflect what had always been its core. That same year it becomes the first DryLab photographic laboratory in the Bajo Guadalentín region, investing in professional photographic paper printing.</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="tl-item" role="listitem">
+            <div class="tl-year">2019</div>
+            <div class="tl-texto">
+              <span class="tl-titulo">
+                <span data-lang="es">El estudio artístico</span>
+                <span data-lang="en" hidden>The artistic studio</span>
+              </span>
+              <p class="tl-desc">
+                <span data-lang="es">Se inaugura el primer estudio fotográfico, pensado para sesiones en película de formato medio sin flash. Un espacio para trabajar sin prisa.</span>
+                <span data-lang="en" hidden>The first photography studio opens, designed for medium format film sessions without flash. A space to work without rush.</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="tl-item" role="listitem">
+            <div class="tl-year">2021</div>
+            <div class="tl-texto">
+              <span class="tl-titulo">
+                <span data-lang="es">El estudio de retrato</span>
+                <span data-lang="en" hidden>The portrait studio</span>
+              </span>
+              <p class="tl-desc">
+                <span data-lang="es">Se suma un segundo estudio para fotografía digital de retrato: familias, comuniones, niños y sesiones de temporada.</span>
+                <span data-lang="en" hidden>A second studio for digital portrait photography is added: families, communions, children and seasonal sessions.</span>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOTOS HISTÓRICAS ====================================== -->
+    <section class="historicas" aria-labelledby="tit-historicas">
+      <div class="historicas-inner">
+
+        <h2 id="tit-historicas">
+          <span data-lang="es">Así empezó todo</span>
+          <span data-lang="en" hidden>How it all began</span>
+        </h2>
+        <div class="sep" aria-hidden="true"></div>
+
+        <div class="historicas-grid">
+          <figure class="historica-item">
+            <img src="Nosotros/Histórica 1.jpg"
+                 alt="ZONA Fotografía en sus primeros años — Alhama de Murcia, 2006-2016"
+                 width="600" height="450">
+            <figcaption class="historica-caption">
+              <span data-lang="es">Alhama de Murcia, 2006–2016</span>
+              <span data-lang="en" hidden>Alhama de Murcia, 2006–2016</span>
+            </figcaption>
+          </figure>
+          <figure class="historica-item">
+            <img src="Nosotros/Histórica 2.jpg"
+                 alt="La tienda ZONA Fotografía en sus primeros años — Alhama de Murcia"
+                 width="600" height="450">
+            <figcaption class="historica-caption">
+              <span data-lang="es">Alhama de Murcia, 2006–2016</span>
+              <span data-lang="en" hidden>Alhama de Murcia, 2006–2016</span>
+            </figcaption>
+          </figure>
+          <figure class="historica-item">
+            <img src="Nosotros/Histórica 3.jpg"
+                 alt="Evolución de ZONA Fotografía — Alhama de Murcia, 2006-2016"
+                 width="600" height="450">
+            <figcaption class="historica-caption">
+              <span data-lang="es">Alhama de Murcia, 2006–2016</span>
+              <span data-lang="en" hidden>Alhama de Murcia, 2006–2016</span>
+            </figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ENLACE A GALERÍA ====================================== -->
+    <section class="galeria-bloque" aria-labelledby="tit-galeria">
+      <div class="galeria-inner">
+        <div class="galeria-texto">
+          <p class="etiqueta">
+            <span data-lang="es">Trabajos y archivo</span>
+            <span data-lang="en" hidden>Portfolio &amp; archive</span>
+          </p>
+          <h2 id="tit-galeria">
+            <span data-lang="es">Hay más cosas que ver</span>
+            <span data-lang="en" hidden>There is more to see</span>
+          </h2>
+          <p>
+            <span data-lang="es">Trabajos de fotoperiodismo de distintas épocas, pruebas con cámaras de película, proyectos de archivo y mucho más — en la galería de ZONA Fotografía fuera de esta web.</span>
+            <span data-lang="en" hidden>Photojournalism work from different periods, tests with film cameras, archive projects and much more — in the ZONA Fotografía gallery outside this site.</span>
+          </p>
+        </div>
+        <a href="https://zonafotografia.myportfolio.com/conocenos"
+           class="btn-galeria"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Ver galería de trabajos de ZONA Fotografía en Adobe Portfolio">
+          <span data-lang="es">Ver galería →</span>
+          <span data-lang="en" hidden>View gallery →</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- BARRA DE DATOS =========================================== -->
+  <aside class="barra-datos" aria-label="Información de contacto y horario">
+    <div class="barra-datos-inner">
+
+      <div class="dato">
+        <h4>
+          <span data-lang="es">Dónde estamos</span>
+          <span data-lang="en" hidden>Where we are</span>
+        </h4>
+        <p>C/ Virgen del Rosario, 5<br>30840 Alhama de Murcia</p>
+        <span class="badge-accesible">
+          <span data-lang="es">&#9855; Accesible en silla de ruedas &middot; Parking adaptado</span>
+          <span data-lang="en" hidden>&#9855; Wheelchair accessible &middot; Adapted parking</span>
+        </span>
+      </div>
+
+      <div class="dato">
+        <h4>
+          <span data-lang="es">Horario</span>
+          <span data-lang="en" hidden>Opening hours</span>
+        </h4>
+        <p>
+          <span data-lang="es">Lun–Jue: 10:00–13:30 y 17:30–20:00<br>Viernes: 10:00–13:30</span>
+          <span data-lang="en" hidden>Mon–Thu: 10:00–13:30 &amp; 17:30–20:00<br>Friday: 10:00–13:30</span>
+        </p>
+        <p style="margin-top:0.4rem; font-size:0.78rem; color:#555">
+          <span data-lang="es">Pedidos por WhatsApp: 24/7</span>
+          <span data-lang="en" hidden>WhatsApp orders: 24/7</span>
+        </p>
+      </div>
+
+      <div class="dato">
+        <h4>
+          <span data-lang="es">Contacto</span>
+          <span data-lang="en" hidden>Contact</span>
+        </h4>
+        <p>
+          <a href="tel:+34608397283">608 39 72 83</a><br>
+          <a href="https://wa.me/34608397283" target="_blank" rel="noopener">WhatsApp</a>
+        </p>
+      </div>
+
+      <div class="dato">
+        <h4>
+          <span data-lang="es">Valoración en Google</span>
+          <span data-lang="en" hidden>Google rating</span>
+        </h4>
+        <!-- Actualizar ratingValue y reviewCount cuando cambien en Google My Business -->
+        <a href="https://www.google.com/maps/search/ZONA+Fotografía+Alhama+de+Murcia"
+           target="_blank" rel="noopener noreferrer" style="color:#bbbbbb">
+          <p>&#11088; 4,9 / 5</p>
+          <p style="font-size:0.80rem; color:#666; margin-top:0.2rem">
+            <span data-lang="es">46 opiniones verificadas<br><span style="font-size:0.75rem; color:#555">Ver en Google →</span></span>
+            <span data-lang="en" hidden>46 verified reviews<br><span style="font-size:0.75rem; color:#555">See on Google →</span></span>
+          </p>
+        </a>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- FOOTER =================================================== -->
+  <footer>
+    <p>
+      &copy; 2026 <span>ZONA Fotografía</span>
+      &nbsp;&middot;&nbsp; C/ Virgen del Rosario 5, Alhama de Murcia
+      &nbsp;&middot;&nbsp;
+      <a href="privacidad.html">
+        <span data-lang="es">Privacidad y forma de trabajo</span>
+        <span data-lang="en" hidden>Privacy &amp; how we work</span>
+      </a>
+      &nbsp;&middot;&nbsp;
+      <span data-lang="es">Miembros de la Real Sociedad Fotográfica</span>
+      <span data-lang="en" hidden>Members of the Royal Photographic Society of Spain</span>
+    </p>
+  </footer>
+
+  <!-- SCRIPT DE IDIOMA ========================================= -->
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(function(el) {
+        el.hidden = (el.dataset.lang !== lang);
+      });
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-es').setAttribute('aria-pressed', lang === 'es');
+      document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
+      document.documentElement.lang = lang;
+      localStorage.setItem('zona-lang', lang);
+    }
+
+    (function() {
+      var saved = localStorage.getItem('zona-lang');
+      if (saved && saved !== 'es') setLang(saved);
+    })();
+  </script>
+
+</body>
+</html>

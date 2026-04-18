@@ -1,0 +1,9 @@
+# Archivos de trabajo internos
+*.txt
+*.md
+.claude/
+
+# Sistema
+Thumbs.db
+.DS_Store
+desktop.ini
