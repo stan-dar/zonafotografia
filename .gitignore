@@ -3,6 +3,9 @@
 *.md
 .claude/
 
+# Excepcion: robots.txt SI debe publicarse (lo necesita Google)
+!robots.txt
+
 # Sistema
 Thumbs.db
 .DS_Store
