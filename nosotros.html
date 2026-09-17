@@ -370,8 +370,9 @@
        GALERÍA EXTERNA
     ============================================================ */
     .galeria-bloque {
-      background: var(--negro);
-      color: var(--blanco);
+      background: var(--acento-cl);
+      color: var(--texto);
+      border-top: 3px solid var(--acento);
       padding: 4rem 1.5rem;
     }
 
@@ -388,7 +389,7 @@
       font-size: 0.72rem;
       text-transform: uppercase;
       letter-spacing: 0.13em;
-      color: var(--acento);
+      color: #6B5010;
       margin-bottom: 0.9rem;
       font-weight: 700;
     }
@@ -403,7 +404,7 @@
 
     .galeria-texto p {
       font-size: 0.97rem;
-      color: #ccc;
+      color: #4a4a4a;
       line-height: 1.7;
       max-width: 60ch;
     }
@@ -413,7 +414,8 @@
       align-items: center;
       gap: 0.6rem;
       border: 1px solid var(--acento);
-      color: var(--acento-cl);
+      background: var(--acento);
+      color: var(--blanco);
       font-weight: 600;
       font-size: 0.95rem;
       padding: 0.9rem 2rem;
@@ -421,7 +423,7 @@
       transition: all 0.2s;
       white-space: nowrap;
     }
-    .btn-galeria:hover { background: var(--acento); color: var(--blanco); }
+    .btn-galeria:hover { background: var(--negro); border-color: var(--negro); color: var(--blanco); }
 
     /* ============================================================
        BARRA DE DATOS
@@ -473,7 +475,12 @@
     /* ============================================================
        RESPONSIVE
     ============================================================ */
-    @media (max-width: 820px) {
+    @media (max-width: 1180px) and (min-width: 1025px) {
+      .logo { font-size: 1.25rem; }
+      nav a { font-size: 0.72rem; letter-spacing: 0.04em; padding: 0.4rem 0.4rem; }
+    }
+
+    @media (max-width: 1024px) {
       .header-inner { height: 64px; padding: 0 1rem; }
       .header-right { gap: 0.6rem; }
       .nav-toggle { display: flex; }
@@ -570,6 +577,7 @@
             <span data-lang="es">Estudio</span>
             <span data-lang="en" hidden>Studio</span>
           </a>
+          <a href="voz-de-tinaja.html">Voz de Tinaja</a>
           <a href="nosotros.html" aria-current="page">
             <span data-lang="es">Nosotros</span>
             <span data-lang="en" hidden>About Us</span>

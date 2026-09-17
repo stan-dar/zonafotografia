@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://zonafotografia.com/</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://zonafotografia.com/"/>
@@ -13,7 +13,7 @@
 
   <url>
     <loc>https://zonafotografia.com/atelier.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://zonafotografia.com/atelier.html"/>
@@ -22,7 +22,7 @@
 
   <url>
     <loc>https://zonafotografia.com/contacto.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://zonafotografia.com/contacto.html"/>
@@ -31,7 +31,7 @@
 
   <url>
     <loc>https://zonafotografia.com/estudio.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://zonafotografia.com/estudio.html"/>
@@ -40,7 +40,7 @@
 
   <url>
     <loc>https://zonafotografia.com/fotos-carnet.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://zonafotografia.com/fotos-carnet.html"/>
@@ -49,7 +49,7 @@
 
   <url>
     <loc>https://zonafotografia.com/imprimir-fotos.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://zonafotografia.com/imprimir-fotos.html"/>
@@ -58,7 +58,7 @@
 
   <url>
     <loc>https://zonafotografia.com/nosotros.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://zonafotografia.com/nosotros.html"/>
@@ -67,7 +67,7 @@
 
   <url>
     <loc>https://zonafotografia.com/privacidad.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://zonafotografia.com/privacidad.html"/>
@@ -76,11 +76,20 @@
 
   <url>
     <loc>https://zonafotografia.com/restauracion-fotos.html</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://zonafotografia.com/restauracion-fotos.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://zonafotografia.com/restauracion-fotos.html"/>
+  </url>
+
+  <url>
+    <loc>https://zonafotografia.com/voz-de-tinaja.html</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://zonafotografia.com/voz-de-tinaja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://zonafotografia.com/voz-de-tinaja.html"/>
   </url>
 
 </urlset>
