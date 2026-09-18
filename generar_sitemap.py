@@ -24,7 +24,7 @@ DOMINIO = "https://zonafotografia.com"
 IDIOMAS = ["es", "en"]
 
 # Archivos .html que NO deben aparecer en el sitemap (plantillas, borradores...)
-EXCLUIR = {"404.html", "google.html"}
+EXCLUIR = {"404.html", "google.html", "tienda.html", "conocenos.html"}
 
 # Prioridad y frecuencia segun el archivo. Si no esta en la lista, usa POR_DEFECTO.
 REGLAS = {
